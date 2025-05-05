@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant Menu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0eade;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .menu-container {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-title {
+      text-align: center;
+      font-size: 3rem;
+      color: #342c1c;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      letter-spacing: 2px;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      font-size: 1.1rem;
+      padding: 0.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed #ddd;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    /* Section colors */
+    .rice-section { background-color: #fff3e6; border-left: 6px solid #ffa94d; }
+    .protein-section { background-color: #e6fff2; border-left: 6px solid #4ddfa9; }
+    .barbecue-section { background-color: #ffe6cc; border-left: 6px solid #ff9933; }
+    .pasta-section { background-color: #e6f0ff; border-left: 6px solid #4d94ff; }
+    .swallow-section { background-color: #fef9e7; border-left: 6px solid #d4ac0d; }
+    .soup-section { background-color: #f9ebea; border-left: 6px solid #c0392b; }
+    .cold-beverages-section { background-color: #f0e6ff; border-left: 6px solid #a64dff; }
+    .hot-beverages-section { background-color: #ffe6f2; border-left: 6px solid #ff66b2; }
+    .alcoholic-section { background-color: #e8f6f3; border-left: 6px solid #1abc9c; }
+    .shisha-section { background-color: #e6f7ff; border-left: 6px solid #3399ff; }
+    .sides-section { background-color: #fdf3f3; border-left: 6px solid #d96b6b; }
+    .fruit-section { background-color: #e8ffe8; border-left: 6px solid #51c451; }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <h1 class="menu-title">WHITE BALL MENU</h1>
+
+    <!-- RICE SECTION -->
+<section class="rice-section">
+  <h2>Rice</h2>
+  <ul>
+    <li><span>Jollof Rice</span><span>₦3,000</span></li>
+    <li><span>Fried Rice</span><span>₦3,000</span></li>
+    <li><span>Coconut Rice</span><span>₦4,500</span></li>
+    <li><span>Mandi Rice</span><span>₦8,500</span></li>
+    <li><span>Chinese Rice</span><span>₦9,000</span></li>
+  </ul>
+</section>
+
+<!-- PROTEIN SECTION -->
+<section class="protein-section">
+  <h2>Protein</h2>
+  <ul>
+    <li><span>Egg</span><span>₦1,500</span></li>
+    <li><span>Goat Meat</span><span>₦4,000</span></li>
+    <li><span>Croaker Fish</span><span>₦4,000</span></li>
+    <li><span>Chicken</span><span>₦5,000</span></li>
+    <li><span>Peppered Chicken</span><span>₦6,000</span></li>
+    <li><span>Peppered Goat Meat</span><span>₦6,000</span></li>
+  </ul>
+</section>
+
+<!-- BARBECUE SECTION -->
+<section class="barbecue-section">
+  <h2>Barbecue</h2>
+  <ul>
+    <li><span>Grilled Catfish</span><span>₦15,000</span></li>
+    <li><span>Grilled Chicken</span><span>₦18,000</span></li>
+    <li><span>Grilled Croaker</span><span>₦18,000</span></li>
+    <li><span>Grilled Tilapia</span><span>₦18,000</span></li>
+  </ul>
+</section>
+
+<!-- PASTA SECTION -->
+<section class="pasta-section">
+  <h2>Pasta</h2>
+  <ul>
+    <li><span>Alfredo Pasta</span><span>₦10,000</span></li>
+    <li><span>Spaghetti Bolognese</span><span>₦10,000</span></li>
+  </ul>
+</section>
+
+<!-- SWALLOW SECTION -->
+<section class="swallow-section">
+  <h2>Swallow</h2>
+  <ul>
+    <li><span>Semo</span><span>₦1,000</span></li>
+    <li><span>Eba</span><span>₦1,000</span></li>
+    <li><span>Wheat Flour</span><span>₦1,000</span></li>
+    <li><span>Pounded Yam</span><span>₦2,000</span></li>
+    <li><span>Plantain Flour</span><span>₦2,000</span></li>
+  </ul>
+</section>
+
+<!-- SOUP SECTION -->
+<section class="soup-section">
+  <h2>Soup</h2>
+  <ul>
+    <li><span>Ogbono</span><span>₦3,000</span></li>
+    <li><span>Egusi</span><span>₦3,000</span></li>
+    <li><span>Vegetable</span><span>₦5,000</span></li>
+    <li><span>Afang</span><span>₦5,000</span></li>
+    <li><span>Efo Riro</span><span>₦6,000</span></li>
+    <li><span>Goat Meat Pepper Soup</span><span>₦7,000</span></li>
+    <li><span>Croaker Pepper Soup</span><span>₦8,000</span></li>
+    <li><span>Chicken Pepper Soup</span><span>₦8,000</span></li>
+    <li><span>Fisherman Okro</span><span>₦18,000</span></li>
+  </ul>
+</section>
+
+<!-- COLD BEVERAGES SECTION -->
+<section class="cold-beverages-section">
+  <h2>Cold Beverages</h2>
+  <ul>
+    <li><span>Water</span><span>₦500</span></li>
+    <li><span>Coke</span><span>₦1,000</span></li>
+    <li><span>Fanta</span><span>₦1,000</span></li>
+    <li><span>Chapman</span><span>₦5,000</span></li>
+    <li><span>Banana Smoothie</span><span>₦7,000</span></li>
+    <li><span>Watermelon Smoothie</span><span>₦7,000</span></li>
+    <li><span>Pineapple Smoothie</span><span>₦7,000</span></li>
+    <li><span>Ice Tea</span><span>₦7,000</span></li>
+    <li><span>Vanilla Milkshake</span><span>₦7,000</span></li>
+    <li><span>Chocolate Milkshake</span><span>₦7,000</span></li>
+    <li><span>Oreo Milkshake</span><span>₦7,000</span></li>
+  </ul>
+</section>
+
+<!-- HOT BEVERAGES SECTION -->
+<section class="hot-beverages-section">
+  <h2>Hot Beverages</h2>
+  <ul>
+    <li><span>Coffee</span><span>₦3,000</span></li>
+    <li><span>Hot Chocolate</span><span>₦3,500</span></li>
+    <li><span>Arabian Tea (Small)</span><span>₦5,000</span></li>
+    <li><span>Herbal Tea (Small)</span><span>₦5,000</span></li>
+    <li><span>Double double</span><span>₦8,000</span></li>
+    <li><span>Arabian Tea (Big)</span><span>₦10,000</span></li>
+    <li><span>Herbal Tea (Big)</span><span>₦10,000</span></li>
+  </ul>
+</section>
+
+<!-- ALCOHOLIC DRINKS SECTION -->
+<section class="alcoholic-section">
+  <h2>Alcoholic Drinks</h2>
+  <ul>
+    <li><span>Long Island</span><span>₦10,000</span></li>
+    <li><span>Sex on the Beach</span><span>₦10,000</span></li>
+    <li><span>Four Cousins</span><span>₦30,000</span></li>
+    <li><span>Carlo Rossi</span><span>₦30,000</span></li>
+  </ul>
+</section>
+
+<!-- SHISHA SECTION -->
+<section class="shisha-section">
+  <h2>Shisha</h2>
+  <ul>
+    <li><span>Extra Coal</span><span>₦1,000</span></li>
+    <li><span>Reg Shisha</span><span>₦8,500</span></li>
+    <li><span>VIP Shisha</span><span>₦15,000</span></li>
+  </ul>
+</section>
+
+<!-- SIDES SECTION -->
+<section class="sides-section">
+  <h2>Sides</h2>
+  <ul>
+    <li><span>Plantain</span><span>₦1,500</span></li>
+    <li><span>Steamed Rice</span><span>₦2,500</span></li>
+    <li><span>Sweet Potato</span><span>₦3,000</span></li>
+    <li><span>Fries</span><span>₦3,000</span></li>
+    <li><span>Yam Fries</span><span>₦3,000</span></li>
+    <li><span>Chicken Wings</span><span>₦7,000</span></li>
+  </ul>
+</section>
+
+<!-- FRUIT SECTION -->
+<section class="fruit-section">
+  <h2>Fresh Fruit Drinks</h2>
+  <ul>
+    <li><span>Mixed Fruit</span><span>₦4,000</span></li>
+    <li><span>Pineapple</span><span>₦4,000</span></li>
+    <li><span>Orange</span><span>₦4,000</span></li>
+    <li><span>Watermelon</span><span>₦4,000</span></li>
+  </ul>
+</section>
+
+  </div>
+</body>
+</html>
