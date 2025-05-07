@@ -9,7 +9,8 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f0eade;
+      background: url('favicon.jpg') no-repeat right top fixed;
+      background-size: 150px;
       margin: 0;
       padding: 0;
       color: #333;
@@ -25,12 +26,18 @@
     }
 
     .menu-title {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 100;
       text-align: center;
       font-size: 3rem;
       color: #342c1c;
       font-weight: bold;
       margin-bottom: 2rem;
       letter-spacing: 2px;
+      padding: 1rem 0;
+      border-bottom: 2px solid #ddd;
     }
 
     section {
@@ -38,6 +45,7 @@
       padding: 1.5rem;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      scroll-margin-top: 100px;
     }
 
     section h2 {
@@ -78,86 +86,100 @@
     .sides-section { background-color: #fdf3f3; border-left: 6px solid #d96b6b; }
     .fruit-section { background-color: #e8ffe8; border-left: 6px solid #51c451; }
   </style>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+          });
+        });
+      });
+    });
+  </script>
 </head>
 <body>
   <div class="menu-container">
     <h1 class="menu-title">WHITE BALL MENU</h1>
 
     <!-- RICE SECTION -->
-<section class="rice-section">
-  <h2>Rice</h2>
-  <ul>
-    <li><span>Jollof Rice</span><span>₦3,000</span></li>
-    <li><span>Fried Rice</span><span>₦3,000</span></li>
-    <li><span>Coconut Rice</span><span>₦4,500</span></li>
-    <li><span>Mandi Rice</span><span>₦8,500</span></li>
-    <li><span>Chinese Rice</span><span>₦9,000</span></li>
-  </ul>
-</section>
+    <section class="rice-section" id="rice">
+      <h2>Rice</h2>
+      <ul>
+        <li><span>Jollof Rice</span><span>₦4,000</span></li>
+        <li><span>Fried Rice</span><span>₦4,000</span></li>
+        <li><span>Coconut Rice</span><span>₦4,500</span></li>
+        <li><span>Mandi Rice</span><span>₦8,500</span></li>
+        <li><span>Chinese Rice</span><span>₦9,000</span></li>
+      </ul>
+    </section>
 
-<!-- PROTEIN SECTION -->
-<section class="protein-section">
-  <h2>Protein</h2>
-  <ul>
-    <li><span>Egg</span><span>₦1,500</span></li>
-    <li><span>Goat Meat</span><span>₦4,000</span></li>
-    <li><span>Croaker Fish</span><span>₦4,000</span></li>
-    <li><span>Chicken</span><span>₦5,000</span></li>
-    <li><span>Peppered Chicken</span><span>₦6,000</span></li>
-    <li><span>Peppered Goat Meat</span><span>₦6,000</span></li>
-  </ul>
-</section>
+    <!-- PROTEIN SECTION -->
+    <section class="protein-section" id="protein">
+      <h2>Protein</h2>
+      <ul>
+        <li><span>Egg</span><span>₦1,000</span></li>
+        <li><span>Goat Meat</span><span>₦5,000</span></li>
+        <li><span>Croaker Fish</span><span>₦4,500</span></li>
+        <li><span>Chicken</span><span>₦5,000</span></li>
+        <li><span>Peppered Chicken</span><span>₦6,000</span></li>
+        <li><span>Peppered Goat Meat</span><span>₦6,000</span></li>
+      </ul>
+    </section>
 
-<!-- BARBECUE SECTION -->
-<section class="barbecue-section">
-  <h2>Barbecue</h2>
-  <ul>
-    <li><span>Grilled Catfish</span><span>₦15,000</span></li>
-    <li><span>Grilled Chicken</span><span>₦18,000</span></li>
-    <li><span>Grilled Croaker</span><span>₦18,000</span></li>
-    <li><span>Grilled Tilapia</span><span>₦18,000</span></li>
-  </ul>
-</section>
+    <!-- BARBECUE SECTION -->
+    <section class="barbecue-section" id="barbecue">
+      <h2>Barbecue</h2>
+      <ul>
+        <li><span>Grilled Catfish</span><span>₦15,000</span></li>
+        <li><span>Grilled Chicken</span><span>₦15,000</span></li>
+        <li><span>Grilled Croaker</span><span>₦15,000</span></li>
+        <li><span>Grilled Tilapia</span><span>₦15,000</span></li>
+      </ul>
+    </section>
 
-<!-- PASTA SECTION -->
-<section class="pasta-section">
-  <h2>Pasta </h2>
-  <ul>
-    <li><span>Stirfry Noodles ll</span><span>₦4,000</span></li>
-    <li><span>Alfredo Pasta</span><span>₦10,000</span></li>
-    <li><span>Stirfry Pasta</span><span>₦10,000</span></li>
-    <li><span>Spaghetti Bolognese</span><span>₦10,000</span></li>
-  </ul>
-</section>
+    <!-- PASTA SECTION -->
+    <section class="pasta-section" id="pasta">
+      <h2>Pasta</h2>
+      <ul>
+        <li><span>Stirfry Noodles</span><span>₦5,000</span></li>
+        <li><span>Alfredo Pasta</span><span>₦8,000</span></li>
+        <li><span>Stirfry Pasta</span><span>₦8,000</span></li>
+        <li><span>Spaghetti Bolognese</span><span>₦8,000</span></li>
+      </ul>
+    </section>
 
+    <!-- SWALLOW SECTION -->
+    <section class="swallow-section" id="swallow">
+      <h2>Swallow</h2>
+      <ul>
+        <li><span>Semo</span><span>₦1,000</span></li>
+        <li><span>Eba</span><span>₦1,000</span></li>
+        <li><span>Wheat Flour</span><span>₦1,000</span></li>
+        <li><span>Pounded Yam</span><span>₦2,000</span></li>
+        <li><span>Plantain Flour</span><span>₦2,000</span></li>
+      </ul>
+    </section>
 
-<!-- SWALLOW SECTION -->
-<section class="swallow-section">
-  <h2>Swallow</h2>
-  <ul>
-    <li><span>Semo</span><span>₦1,000</span></li>
-    <li><span>Eba</span><span>₦1,000</span></li>
-    <li><span>Wheat Flour</span><span>₦1,000</span></li>
-    <li><span>Pounded Yam</span><span>₦2,000</span></li>
-    <li><span>Plantain Flour</span><span>₦2,000</span></li>
-  </ul>
-</section>
+    <!-- SOUP SECTION -->
+    <section class="soup-section" id="soup">
+      <h2>Soup</h2>
+      <ul>
+        <li><span>Ogbono</span><span>₦3,000</span></li>
+        <li><span>Egusi</span><span>₦3,000</span></li>
+        <li><span>Vegetable</span><span>₦4,000</span></li>
+        <li><span>Afang</span><span>₦5,000</span></li>
+        <li><span>Efo Riro</span><span>₦6,000</span></li>
+        <li><span>Goat Meat Pepper Soup</span><span>₦7,000</span></li>
+        <li><span>Croaker Pepper Soup</span><span>₦8,000</span></li>
+        <li><span>Chicken Pepper Soup</span><span>₦8,000</span></li>
+        <li><span>Fisherman Okro</span><span>₦18,000</span></li>
+      </ul>
+    </section>
 
-<!-- SOUP SECTION -->
-<section class="soup-section">
-  <h2>Soup</h2>
-  <ul>
-    <li><span>Ogbono</span><span>₦3,000</span></li>
-    <li><span>Egusi</span><span>₦3,000</span></li>
-    <li><span>Vegetable</span><span>₦5,000</span></li>
-    <li><span>Afang</span><span>₦5,000</span></li>
-    <li><span>Efo Riro</span><span>₦6,000</span></li>
-    <li><span>Goat Meat Pepper Soup</span><span>₦7,000</span></li>
-    <li><span>Croaker Pepper Soup</span><span>₦8,000</span></li>
-    <li><span>Chicken Pepper Soup</span><span>₦8,000</span></li>
-    <li><span>Fisherman Okro</span><span>₦18,000</span></li>
-  </ul>
-</section>
 
 <!-- COLD BEVERAGES SECTION -->
 <section class="cold-beverages-section">
